@@ -34,6 +34,16 @@ public class SmoothMouseLook : MonoBehaviour
 
     Quaternion originalRotation;
 
+    void Start()
+    {
+        // Make the rigid body not change rotation
+        if (GetComponent<Rigidbody>())
+            GetComponent<Rigidbody>().freezeRotation = true;
+        originalRotation = transform.localRotation;
+
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     void Update()
     {
         if (axes == RotationAxes.MouseXAndY)
@@ -66,14 +76,6 @@ public class SmoothMouseLook : MonoBehaviour
             Quaternion yQuaternion = Quaternion.AngleAxis(rotationY, Vector3.left);
             transform.localRotation = originalRotation * yQuaternion;
         }
-    }
-
-    void Start()
-    {
-        // Make the rigid body not change rotation
-        if (GetComponent<Rigidbody>())
-            GetComponent<Rigidbody>().freezeRotation = true;
-        originalRotation = transform.localRotation;
     }
 
     public static float ClampAngle(float angle, float min, float max)
