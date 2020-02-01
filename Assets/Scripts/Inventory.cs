@@ -45,6 +45,19 @@ public class Inventory : MonoBehaviour
 
             Destroy(other.gameObject);
         }
+
+        if (other.gameObject.CompareTag("Subtitles"))
+        {
+            if(!other.GetComponent<Subtitles>().triggered)
+            {
+                FindObjectOfType<UIManager>().subtitles.text = other.GetComponent<Subtitles>().text;
+                FindObjectOfType<UIManager>().subtitles.color = Color.white;
+                FindObjectOfType<UIManager>().timerActive = true;
+                FindObjectOfType<UIManager>().uiTimer = 0f;
+                FindObjectOfType<UIManager>().uiTimerEnd = other.GetComponent<Subtitles>().time;
+                other.GetComponent<Subtitles>().triggered = true;
+            }
+        }
     }
 
     private void OnTriggerExit(Collider other)
