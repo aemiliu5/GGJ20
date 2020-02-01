@@ -42,6 +42,7 @@ public class Inventory : MonoBehaviour
         if (other.gameObject.CompareTag("Rag"))
         {
             rags++;
+
             Destroy(other.gameObject);
         }
     }
