@@ -24,7 +24,7 @@ public class Tree : MonoBehaviour
                 GetComponent<Rigidbody>().mass = 5;
                 GetComponent<Rigidbody>().AddForce(transform.right * 50f);
 
-                transform.localScale -= new Vector3(0.025f, 0.025f, 0.025f);
+                transform.localScale -= Vector3.one * Time.deltaTime;
 
                 if(transform.localScale.x <= 0f)
                 {
