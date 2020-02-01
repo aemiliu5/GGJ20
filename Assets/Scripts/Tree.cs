@@ -23,15 +23,14 @@ public class Tree : MonoBehaviour
             {
                 GetComponent<Rigidbody>().mass = 5;
                 GetComponent<Rigidbody>().AddForce(transform.right * 50f);
-            }
 
-            if (fadeTimer > 3.5f)
-                GetComponent<Renderer>().material.color -= new Color(0, 0, 0, 0.05f);
-        }
+                transform.localScale -= new Vector3(0.025f, 0.025f, 0.025f);
 
-        if(GetComponent<Renderer>().material.color.a <= 0f)
-        {
-            Destroy(gameObject, 0.25f);
+                if(transform.localScale.x <= 0f)
+                {
+                    Destroy(gameObject);
+                }
+            }         
         }
     }
 

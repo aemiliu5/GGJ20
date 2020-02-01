@@ -7,7 +7,7 @@ public class Inventory : MonoBehaviour
     [Header("Materials")]
     public int wood;
     public int rope;
-    public int sail;
+    public int rags;
 
     [Header("Game Objects")]
     public GameObject axe;
@@ -31,6 +31,18 @@ public class Inventory : MonoBehaviour
         {
             inTree = true;
             treeGO = other.gameObject;
+        }
+
+        if (other.gameObject.CompareTag("Rope"))
+        {
+            rope++;
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.CompareTag("Rag"))
+        {
+            rags++;
+            Destroy(other.gameObject);
         }
     }
 
