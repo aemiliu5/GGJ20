@@ -23,11 +23,9 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         // Jump & Grounded Check
-        Ray r = new Ray(transform.position - new Vector3(0, 2.6f, 0), Vector3.down);
-        Debug.DrawRay(r.origin, r.direction);
-        isGrounded = !Physics.Raycast(r);
-
-        Debug.Log(Physics.Raycast(r));
+        Ray r = new Ray(transform.position - new Vector3(0, 2.2f, 0), Vector3.down);
+        Debug.DrawRay(r.origin, r.direction * 2f);
+        isGrounded = Physics.Raycast(r, 1.5f);
 
         if (Input.GetAxis("Jump") > 0 && isGrounded)
         {
