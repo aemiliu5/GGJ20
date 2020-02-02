@@ -3363,8 +3363,8 @@ WindZone:
   m_Mode: 1
   m_Radius: 100
   m_WindMain: 1.5
-  m_WindTurbulence: 10
-  m_WindPulseMagnitude: 2
+  m_WindTurbulence: 3
+  m_WindPulseMagnitude: 1.8
   m_WindPulseFrequency: 0.02
 --- !u!4 &368327805
 Transform:
@@ -15319,7 +15319,7 @@ WindZone:
   m_Mode: 1
   m_Radius: 100
   m_WindMain: 1.5
-  m_WindTurbulence: 15
+  m_WindTurbulence: 1.2
   m_WindPulseMagnitude: 2
   m_WindPulseFrequency: 0.02
 --- !u!4 &1440570648
@@ -19039,8 +19039,8 @@ WindZone:
   m_Mode: 1
   m_Radius: 100
   m_WindMain: 1.5
-  m_WindTurbulence: 15
-  m_WindPulseMagnitude: 2
+  m_WindTurbulence: 10
+  m_WindPulseMagnitude: 3
   m_WindPulseFrequency: 0.02
 --- !u!4 &1702303701
 Transform:
