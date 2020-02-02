@@ -26063,10 +26063,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.16
-  jumpHeight: 3000
+  jumpHeight: 150
   sprintMultiplier: 1.8
   isGrounded: 0
   footstepTimer: 0
+  raycastHeight: 2
   sandClip: {fileID: 8300000, guid: d353d675ee63a8740b69095f050b90ab, type: 3}
   grassClip: {fileID: 8300000, guid: cfaa779b7b843c548b5db571235a3afe, type: 3}
   grassClip2: {fileID: 8300000, guid: 20d9f6a624d936c4f9893e20c8dba1cd, type: 3}

@@ -32,6 +32,21 @@ public class PlayerController : MonoBehaviour
     public AudioSource pickup;
     public TerrainCheck terrainCheck;
 
+    private void Update()
+    {
+        // Jump & Grounded Check
+        Ray r = new Ray(transform.position - new Vector3(0, 2.2f, 0), Vector3.down);
+        Debug.DrawRay(r.origin, r.direction * raycastHeight);
+        isGrounded = Physics.Raycast(r, raycastHeight, 1 << 9);
+
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+            GetComponent<Rigidbody>().AddForce(0, jumpHeight, 0);
+            voice.clip = jumpClip;
+            voice.Play();
+        }
+    }
+
     private void FixedUpdate()
     {
         // Movement
@@ -40,18 +55,6 @@ public class PlayerController : MonoBehaviour
         float zMove = Input.GetAxis("Vertical") * speed * sprint;
         bool isMoving = Mathf.Abs(Input.GetAxis("Horizontal")) > 0 || Mathf.Abs(Input.GetAxis("Vertical")) > 0;
         transform.Translate(xMove, 0, zMove);
-
-        // Jump & Grounded Check
-        Ray r = new Ray(transform.position - new Vector3(0, 2.2f, 0), Vector3.down);
-        Debug.DrawRay(r.origin, r.direction * raycastHeight);
-        isGrounded = Physics.Raycast(r, raycastHeight, 1 << 9);
-
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            GetComponent<Rigidbody>().AddForce(0, jumpHeight  , 0);
-            voice.clip = jumpClip;
-            voice.Play();
-        }
 
         // Footstep Sounds
         switch(terrainCheck.surfaceIndex)
