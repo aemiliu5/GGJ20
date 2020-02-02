@@ -34,7 +34,7 @@ public class UIManager : MonoBehaviour
     {
         woodOutline.text = wood.text = inv.wood.ToString() + "/12";
         ropeOutline.text = rope.text = inv.rope.ToString() + "/4";
-        ragsOutline.text = rags.text = inv.rags.ToString() + "/2";
+        ragsOutline.text = rags.text = inv.rags.ToString() + "/1";
         timer.fillAmount = gm.timer / gm.timerStart;
 
         if(uiTimer > uiTimerEnd)
