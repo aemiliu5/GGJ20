@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
 
         if(timer <= 0f)
         {
-            Debug.Log("You lose :(");
+            UnityEngine.SceneManagement.SceneManager.LoadScene(3);
         }
 
         if(Input.GetKeyDown(KeyCode.Escape))

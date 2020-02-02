@@ -106,5 +106,10 @@ public class Inventory : MonoBehaviour
                 treeTimer = 0f;
             }
         }
+
+        if(wood >= 12 && rope >= 4 && rags >= 1)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+        }
     }
 }
