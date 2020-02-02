@@ -15,18 +15,14 @@ Mechanics:
 Credits:
 
 Team Lead, Programmer: Aimilios Seimenis
-Environment Art/Design: Nikolas Joukowski
+Environment & Level Design: Nikolas Joukowski
 Producer, Game Design: Dimitris Lourantos
 Art: Giorgos Karageorgas, Nikos Tziotis
 Music & Sound Design: Sevina Ilieva, Ilias Tsismalidis
-
-Emotional Support:
-Christos Thanopoulos
-Christos Mousai
-Sotiris Fonsos
 
 Special Thanks (skeleton model):
 Odysseas, Lito
 
 External assets used:
 [to be completed]
+https://www.theleagueofmoveabletype.com/fanwood
