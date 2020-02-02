@@ -42,7 +42,12 @@ public class Inventory : MonoBehaviour
         if (other.gameObject.CompareTag("Rag"))
         {
             rags++;
+            Destroy(other.gameObject);
+        }
 
+        if (other.gameObject.CompareTag("Map"))
+        {
+            FindObjectOfType<GameManager>().hasMap = true;
             Destroy(other.gameObject);
         }
 

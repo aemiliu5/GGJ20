@@ -15,23 +15,13 @@ public class Tree : MonoBehaviour
             fadeTimer += Time.deltaTime;
 
             // Tree falling
-            if(!GetComponent<Rigidbody>())
+            transform.localScale -= Vector3.one * Time.deltaTime;
+
+            if(transform.localScale.x <= 0f)
             {
-                gameObject.AddComponent(typeof(Rigidbody));
+                Destroy(gameObject);
             }
-            else
-            {
-                GetComponent<Rigidbody>().mass = 5;
-                GetComponent<Rigidbody>().AddForce(transform.right * 50f);
-
-                transform.localScale -= Vector3.one * Time.deltaTime;
-
-                if(transform.localScale.x <= 0f)
-                {
-                    Destroy(gameObject);
-                }
-            }         
-        }
+        }         
     }
 
     private void OnDestroy()

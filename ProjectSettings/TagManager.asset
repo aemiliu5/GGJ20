@@ -9,6 +9,7 @@ TagManager:
   - Rope
   - Rag
   - Subtitles
+  - Map
   layers:
   - Default
   - TransparentFX

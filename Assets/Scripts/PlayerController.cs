@@ -23,8 +23,6 @@ public class PlayerController : MonoBehaviour
         Debug.DrawRay(r.origin, r.direction * 2f);
         isGrounded = Physics.Raycast(r, 1.5f, 1 << 9);
 
-        Debug.Log(Physics.Raycast(r, 1.5f, 1 << 9));
-
         if (Input.GetAxis("Jump") > 0 && isGrounded)
         {
             GetComponent<Rigidbody>().AddForce(0, jumpHeight * Time.deltaTime, 0);

@@ -14,9 +14,12 @@ public class UIManager : MonoBehaviour
     public Text rags;
     public Text subtitles;
     public Image timer;
+    public GameObject map;
     public float uiTimer;
     public float uiTimerEnd;
     public bool timerActive;
+    public bool showMap;
+    public GameObject paused;
 
     [Header("References to other Scripts")]
     public Inventory inv;
@@ -53,5 +56,12 @@ public class UIManager : MonoBehaviour
             if(timerActive)
                 uiTimer += Time.deltaTime;
         }
+
+        if (Input.GetKeyDown(KeyCode.M) && gm.hasMap && gm.paused == false)
+        {
+            showMap = !showMap;
+        }
+
+        map.SetActive(showMap);
     }
 }
