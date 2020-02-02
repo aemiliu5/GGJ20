@@ -23,7 +23,7 @@ public class TerrainCheck : MonoBehaviour
     void Update()
     {
         surfaceIndex = GetMainTexture(transform.position);
-        Debug.Log("index: " + surfaceIndex.ToString() + ", name: " + terrainData.terrainLayers[surfaceIndex].diffuseTexture.name);
+        //Debug.Log("index: " + surfaceIndex.ToString() + ", name: " + terrainData.terrainLayers[surfaceIndex].diffuseTexture.name);
     }
 
     private float[] GetTextureMix(Vector3 WorldPos)

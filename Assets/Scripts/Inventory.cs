@@ -16,6 +16,7 @@ public class Inventory : MonoBehaviour
     public bool inTree;
     public float treeTimer;
     public float treeTimerEnd;
+    public float axeTimer;
     public bool treeBroken;
     public GameObject treeGO;
 
@@ -24,6 +25,8 @@ public class Inventory : MonoBehaviour
         if(other.gameObject.CompareTag("Axe"))
         {
             axe.SetActive(true);
+            GetComponent<PlayerController>().pickup.clip = GetComponent<PlayerController>().pickupClip1;
+            GetComponent<PlayerController>().pickup.Play();
             Destroy(other.gameObject);
         }
 
@@ -90,10 +93,20 @@ public class Inventory : MonoBehaviour
             if (Input.GetMouseButton(0))
             {
                 axe.GetComponent<Animator>().Play("Axe");
+                axeTimer += Time.deltaTime;
 
-                if(inTree)
+                if (inTree)
                 {
                     treeTimer += Time.deltaTime;
+
+                    if (axeTimer > 0.5f)
+                    {
+                        AudioClip[] randomChopSound = { GetComponent<PlayerController>().chopClip1, GetComponent<PlayerController>().chopClip2, GetComponent<PlayerController>().chopClip3 };
+
+                        GetComponent<PlayerController>().pickup.clip = randomChopSound[Random.Range(0, 3)];
+                        GetComponent<PlayerController>().pickup.Play();
+                        axeTimer = 0f;
+                    }
                 }
                 else
                 {
@@ -110,6 +123,7 @@ public class Inventory : MonoBehaviour
             {
                 axe.GetComponent<Animator>().Play("Axe_Idle");
                 treeTimer = 0f;
+                axeTimer = 0f;
             }
         }
 

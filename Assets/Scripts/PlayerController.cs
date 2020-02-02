@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
     public AudioClip pickupClip2;
     public AudioClip pickupClip3;
     public AudioClip pickupClipMap;
+    public AudioClip chopClip1;
+    public AudioClip chopClip2;
+    public AudioClip chopClip3;
 
     [Header("Ref")]
     public AudioSource footsteps;
@@ -39,8 +42,8 @@ public class PlayerController : MonoBehaviour
 
         // Jump & Grounded Check
         Ray r = new Ray(transform.position - new Vector3(0, 2.2f, 0), Vector3.down);
-        Debug.DrawRay(r.origin, r.direction * 1.2f);
-        isGrounded = Physics.Raycast(r, 1.2f, 1 << 9);
+        Debug.DrawRay(r.origin, r.direction * 1.6f);
+        isGrounded = Physics.Raycast(r, 1.6f, 1 << 9);
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
@@ -62,7 +65,7 @@ public class PlayerController : MonoBehaviour
         {
             footstepTimer += Time.fixedDeltaTime;
 
-            if(footstepTimer > (0.6f / sprintMultiplier))
+            if(footstepTimer > (0.6f / sprint))
             {
                 footsteps.Play();
                 footstepTimer = 0f;
