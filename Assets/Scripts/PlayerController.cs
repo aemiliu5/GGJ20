@@ -16,9 +16,16 @@ public class PlayerController : MonoBehaviour
     public AudioClip grassClip;
     public AudioClip grassClip2;
     public AudioClip stoneClip;
+    public AudioClip jumpClip;
+    public AudioClip pickupClip1;
+    public AudioClip pickupClip2;
+    public AudioClip pickupClip3;
+    public AudioClip pickupClipMap;
 
     [Header("Ref")]
     public AudioSource footsteps;
+    public AudioSource voice;
+    public AudioSource pickup;
     public TerrainCheck terrainCheck;
 
     private void FixedUpdate()
@@ -32,12 +39,14 @@ public class PlayerController : MonoBehaviour
 
         // Jump & Grounded Check
         Ray r = new Ray(transform.position - new Vector3(0, 2.2f, 0), Vector3.down);
-        Debug.DrawRay(r.origin, r.direction * 2f);
-        isGrounded = Physics.Raycast(r, 1.5f, 1 << 9);
+        Debug.DrawRay(r.origin, r.direction * 1.2f);
+        isGrounded = Physics.Raycast(r, 1.2f, 1 << 9);
 
-        if (Input.GetAxis("Jump") > 0 && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             GetComponent<Rigidbody>().AddForce(0, jumpHeight * Time.deltaTime, 0);
+            voice.clip = jumpClip;
+            voice.Play();
         }
 
         // Footstep Sounds

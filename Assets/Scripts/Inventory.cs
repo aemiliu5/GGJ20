@@ -36,18 +36,24 @@ public class Inventory : MonoBehaviour
         if (other.gameObject.CompareTag("Rope"))
         {
             rope++;
+            GetComponent<PlayerController>().pickup.clip = GetComponent<PlayerController>().pickupClip2;
+            GetComponent<PlayerController>().pickup.Play();
             Destroy(other.gameObject);
         }
 
         if (other.gameObject.CompareTag("Rag"))
         {
             rags++;
+            GetComponent<PlayerController>().pickup.clip = GetComponent<PlayerController>().pickupClip3;
+            GetComponent<PlayerController>().pickup.Play();
             Destroy(other.gameObject);
         }
 
         if (other.gameObject.CompareTag("Map"))
         {
             FindObjectOfType<GameManager>().hasMap = true;
+            GetComponent<PlayerController>().pickup.clip = GetComponent<PlayerController>().pickupClipMap;
+            GetComponent<PlayerController>().pickup.Play();
             Destroy(other.gameObject);
         }
 
