@@ -37,16 +37,6 @@ public class GameManager : MonoBehaviour
         {
             Pause();
         }
-
-        if(Input.GetKeyDown(KeyCode.LeftBracket))
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(2);
-        }
-
-        if(Input.GetKeyDown(KeyCode.RightBracket))
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(3);
-        }
     }
 
     private void Pause()

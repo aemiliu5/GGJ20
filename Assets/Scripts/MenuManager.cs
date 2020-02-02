@@ -48,7 +48,7 @@ public class MenuManager : MonoBehaviour
 
     public void StartGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(4);
     }
 
     public void QuitGame()
