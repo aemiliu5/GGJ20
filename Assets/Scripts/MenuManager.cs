@@ -24,6 +24,11 @@ public class MenuManager : MonoBehaviour
         options.SetActive(false);
     }
 
+    public void BackToMainMenu()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    }
+
     public void Credits()
     {
         mainMenu.SetActive(false);
@@ -58,6 +63,8 @@ public class MenuManager : MonoBehaviour
         {
             currentRes++;
         }
+
+        GameObject.Find("Resolution").GetComponent<Text>().text = "Resolution: " + r[currentRes].ToString();
     }
 
     public void PrevRes()
@@ -70,13 +77,9 @@ public class MenuManager : MonoBehaviour
         {
             currentRes++;
         }
-    }
 
-    public void Update()
-    {
         GameObject.Find("Resolution").GetComponent<Text>().text = "Resolution: " + r[currentRes].ToString();
     }
-
     public void FullscreenTrue()
     {
         fullScreen = true;

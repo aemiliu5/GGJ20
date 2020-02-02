@@ -64,4 +64,9 @@ public class UIManager : MonoBehaviour
 
         map.SetActive(showMap);
     }
+
+    public void BackToMainMenu()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    }
 }
