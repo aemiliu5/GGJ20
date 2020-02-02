@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     {
         timer = timerStart;
         ui = FindObjectOfType<UIManager>();
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -36,6 +37,16 @@ public class GameManager : MonoBehaviour
         {
             Pause();
         }
+
+        if(Input.GetKeyDown(KeyCode.LeftBracket))
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+        }
+
+        if(Input.GetKeyDown(KeyCode.RightBracket))
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(3);
+        }
     }
 
     private void Pause()
@@ -51,6 +62,9 @@ public class GameManager : MonoBehaviour
             {
                 m.enabled = false;
             }
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
         else
         {
@@ -61,6 +75,9 @@ public class GameManager : MonoBehaviour
             {
                 m.enabled = true;
             }
+
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 }

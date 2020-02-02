@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     public AudioSource pickup;
     public TerrainCheck terrainCheck;
 
-    private void Update()
+    /*private void Update()
     {
         // Jump & Grounded Check
         Ray r = new Ray(transform.position - new Vector3(0, 2.2f, 0), Vector3.down);
@@ -45,8 +45,8 @@ public class PlayerController : MonoBehaviour
             GetComponent<Rigidbody>().AddForce(0, jumpHeight, 0);
             voice.clip = jumpClip;
             voice.Play();
-        }
-    }
+        }    
+    }*/
 
     private void FixedUpdate()
     {

@@ -134,7 +134,7 @@ public class Inventory : MonoBehaviour
             }
         }
 
-        if(wood >= 12 && rope >= 4 && rags >= 1)
+        if(wood >= 10 && rope >= 3 && rags >= 1)
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(2);
         }

@@ -35,8 +35,8 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        woodOutline.text = wood.text = inv.wood.ToString() + "/12";
-        ropeOutline.text = rope.text = inv.rope.ToString() + "/4";
+        woodOutline.text = wood.text = inv.wood.ToString() + "/10";
+        ropeOutline.text = rope.text = inv.rope.ToString() + "/3";
         ragsOutline.text = rags.text = inv.rags.ToString() + "/1";
         timer.fillAmount = gm.timer / gm.timerStart;
 

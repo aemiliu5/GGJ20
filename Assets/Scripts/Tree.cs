@@ -13,6 +13,9 @@ public class Tree : MonoBehaviour
         if(isBroken)
         {
             fadeTimer += Time.deltaTime;
+            
+            if(!GetComponent<AudioSource>().isPlaying)
+                GetComponent<AudioSource>().Play();
 
             // Tree falling
             transform.localScale -= Vector3.one * Time.deltaTime;
