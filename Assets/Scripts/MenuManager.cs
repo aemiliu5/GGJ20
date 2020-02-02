@@ -15,6 +15,7 @@ public class MenuManager : MonoBehaviour
     private void Start()
     {
         r = Screen.resolutions;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void BackToMenu()
