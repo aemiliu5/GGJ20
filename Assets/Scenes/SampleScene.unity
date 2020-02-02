@@ -3709,8 +3709,8 @@ PrefabInstance:
     - target: {fileID: 4026743114508606519, guid: 0d8152a057a63e04cb64c0a1d6a300dc,
         type: 3}
       propertyPath: text
-      value: These will come in handy. Hold [Left Click] to chop tall trees. Press
-        [M] to open the map.
+      value: These will come in handy. Hold [Left Click] to chop tall-sturdy trees.
+        Press [M] to open the map.
       objectReference: {fileID: 0}
     - target: {fileID: 4026743114508606519, guid: 0d8152a057a63e04cb64c0a1d6a300dc,
         type: 3}
