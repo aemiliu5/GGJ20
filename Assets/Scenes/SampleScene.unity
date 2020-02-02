@@ -26080,6 +26080,7 @@ MonoBehaviour:
   chopClip1: {fileID: 8300000, guid: b257aff7687cc1a4da15a4fb51763861, type: 3}
   chopClip2: {fileID: 8300000, guid: 9022a00482685b34d96f850429601e55, type: 3}
   chopClip3: {fileID: 8300000, guid: a72719c90f090fe448b1a6eb4ab214a0, type: 3}
+  airChopClip: {fileID: 8300000, guid: 734866334e7b67c4d9d071c776fe51d2, type: 3}
   footsteps: {fileID: 5265358}
   voice: {fileID: 903691782}
   pickup: {fileID: 1919735719}

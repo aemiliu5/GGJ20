@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip chopClip1;
     public AudioClip chopClip2;
     public AudioClip chopClip3;
+    public AudioClip airChopClip;
 
     [Header("Ref")]
     public AudioSource footsteps;

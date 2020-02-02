@@ -111,6 +111,13 @@ public class Inventory : MonoBehaviour
                 else
                 {
                     treeTimer = 0f;
+
+                    if (axeTimer > 0.5f)
+                    {
+                        GetComponent<PlayerController>().pickup.clip = GetComponent<PlayerController>().airChopClip;
+                        GetComponent<PlayerController>().pickup.Play();
+                        axeTimer = 0f;
+                    }
                 }
 
                 if(treeTimer >= treeTimerEnd)
