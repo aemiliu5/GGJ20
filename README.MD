@@ -1,5 +1,4 @@
 # Stranded
------
 ![Stranded Gameplay Screenshot](https://ggj.s3.amazonaws.com/styles/game_content__wide/games/screenshots/2020/02/276412/screenshot_2_0.png?itok=D3SliKDF&timestamp=1580655670)
 
 Stranded is a survival/exploration game set in a remote tropical island. The main character is a castaway. While travelling on his raft on an island complex, he crashed on the shallows. Washed up on another island with a broken raft and nowhere else to go, he needs to find the necessary components to repair it: wood, rope and rags.
@@ -7,10 +6,10 @@ Stranded is a survival/exploration game set in a remote tropical island. The mai
 His time is running out, as he will die of starvation if he doesn't leave immediately. Can he make it out?
 
 ## Controls
-* [WASD]: Movement
-* [Mouse]: Look Around
-* [Left Click]: Use Axe
-* [Shift]: Sprint
+* WASD: Movement
+* Mouse: Look Around
+* Left Click: Use Axe
+* Shift: Sprint
 * Note: Move directly over an object to pick it up.
 
 ## Technical Details / Build Requirements
